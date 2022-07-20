@@ -1,5 +1,6 @@
 <?php
 echo "Estoy harta";
+echo "GUEVOOOOO";
 
 // start session
 session_start();
