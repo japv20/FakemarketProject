@@ -5,24 +5,24 @@ session_start();
     $_SESSION;
 
 // $mysqli = new mysqli("hostname", "username", "password", "database");
-// $mysqli = new mysqli("localhost", "root", "", "test");
+$mysqli = new mysqli("localhost", "root", "", "test");
  
 // Check connection
-// if($mysqli === false){
-    // die("ERROR: Could not connect. " . $mysqli->connect_error);
-// }
+if($mysqli === false){
+    die("ERROR: Could not connect. " . $mysqli->connect_error);
+}
 // Print host information
-// echo "Connection Successfully. Host info: " . $mysqli->host_info;
+//echo "Connection Successfully. Host info: " . $mysqli->host_info;
 
-// $sql = "select * from products";
-// $result = ($mysqli->query($sql));
+$sql = "select * from products";
+$result = ($mysqli->query($sql));
 // declare array to store the data of database
 $row = [];
 
-// if ($result->num_rows > 0) {
-    //fetch all data from db into array
-    // $row = $result->fetch_all(MYSQLI_ASSOC);
-// }
+if ($result->num_rows > 0) {
+    // fetch all data from db into array
+    $row = $result->fetch_all(MYSQLI_ASSOC);
+}
 
 // Login & Signup
 // https://www.youtube.com/watch?v=WYufSGgaCZ8
