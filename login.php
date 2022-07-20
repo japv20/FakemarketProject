@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 
-    <style> <?php include 'log.css'; ?> </style>
+    <style> <?php include 'css/log.css'; ?> </style>
 </head>
 
 <body>

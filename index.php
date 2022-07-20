@@ -42,7 +42,7 @@ $user_data = check_login($mysqlicon);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <style> <?php include 'styles.css'; ?> </style>
+    <style> <?php include 'css/styles.css'; ?> </style>
     <script src="https://kit.fontawesome.com/c36a3b1500.js" crossorigin="anonymous"></script>
     <!-- <script type="text/javascript" src="scrippt.js"> </script> -->
 </head>

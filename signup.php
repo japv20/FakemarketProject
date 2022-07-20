@@ -40,7 +40,7 @@ session_start();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 
-    <style> <?php include 'sign.css'; ?> </style>
+    <style> <?php include 'css/sign.css'; ?> </style>
 </head>
 <body>
     <header>
