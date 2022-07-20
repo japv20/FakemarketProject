@@ -1,0 +1,77 @@
+body {
+    width: auto;
+    font-family: 'Dosis', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin: 10px; */
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    height: 100%;
+    width: auto;
+    display: flex;
+    /* align-items: center; */
+    text-align: center;
+}
+
+#img-holder {
+    background-image: url("https://images.pexels.com/photos/794062/pexels-photo-794062.jpeg?auto=compress&cs=tinysrgb&w=500&h=600&dpr=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100%; */
+    width: 50%;
+}
+
+#login-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #F2911B;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #F2AC29;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+}

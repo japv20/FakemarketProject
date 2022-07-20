@@ -1,0 +1,29 @@
+// $color = "purple";
+// echo '<h2> My first PHP script </h2> <br>';
+// echo 'Esto funciona?<br>';
+// echo ':) <br>';
+// echo 'My favourite colour is ' . $color . '<br>';
+
+// $txt = 'w3schools.com';
+// echo "I love $txt! <br>";
+
+// // Global keyword
+// $name = 'Jackeline';
+// $middle = 'Andrea';
+
+// function names() {
+// 	global $name, $middle;
+// 	$middle = "$name $middle";
+// }
+
+// names();
+// echo $middle;
+
+// echo strlen("Hello world"); // outputs the legth of that string
+
+// https://www.tutorialrepublic.com/php-tutorial/php-mysql-connect.php#:~:text=1%20Ways%20of%20Connecting%20to%20MySQL%20through%20PHP.,soon%20as%20the%20execution%20of%20the%20script%20ends.
+// phpinfo();
+//PHP version: 8.1.5
+//PHP architecture: x64
+//Configuration File Location: C:\xampp\php\php.ini
+//PHP build version: TS (thread safe)
