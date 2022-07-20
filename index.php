@@ -1,8 +1,9 @@
 <?php
 echo "Estoy harta";
+
 // start session
-// session_start();
-//     $_SESSION;
+session_start();
+    $_SESSION;
 
 // $mysqli = new mysqli("hostname", "username", "password", "database");
 // $mysqli = new mysqli("localhost", "root", "", "test");
