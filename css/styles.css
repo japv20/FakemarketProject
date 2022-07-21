@@ -117,6 +117,8 @@ p {
 }
 .addCart:hover {
     cursor: pointer;
+    background-color: #C5C3C4;
+    /* #F2E8DF; */
 }
 
 /* .img-display {

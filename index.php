@@ -103,7 +103,7 @@ $user_data = check_login($mysqlicon);
         <div class="data">
         <figcaption class="name"> <?php echo $rows['name'];?> </figcaption>
         <!-- <figcaption class="price"> £<?php echo $rows['price'];?> </figcaption> -->
-        <b>£<input type="number" class="price-input" value="<?php echo $rows['price'];?>" readonly disabled> </b>
+        £<input type="number" class="price-input" value="<?php echo $rows['price'];?>" readonly disabled> 
         </div>
         <button class="addCart"> Add to Cart </button>
         
@@ -136,8 +136,10 @@ $user_data = check_login($mysqlicon);
             let price = e.target.previousElementSibling.lastElementChild.value;
             let image = e.target.parentElement.firstElementChild.src;
             let tag = e.target.parentElement.firstElementChild.title;
-            console.log(name, price, tag)
+            console.log("hello" + name, price, tag)
+            console.log(typeof price);
             price = parseInt(price)
+            console.log(typeof price);
             const cartElement = {id: i+1, image: image, name: name, tag: tag, price: price, inCart: 0}
             console.log(cartElement);
             myCart.push(cartElement);
