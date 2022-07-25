@@ -1,4 +1,6 @@
 <?php
+
+echo "Hello";
 // start session
 session_start();
     $_SESSION;
@@ -183,17 +185,17 @@ $user_data = check_login($mysqlicon);
         cartItems = JSON.parse(cartItems);
 
         if(cartItems != null) {
-            if(cartItems[cartElement.tag] == undefined) {
+            if(cartItems[cartElement.id] == undefined) {
                 cartItems = {
                     ...cartItems,
-                    [cartElement.tag]: cartElement
+                    [cartElement.id]: cartElement
                 }
             }
-            cartItems[cartElement.tag].inCart += 1;
+            cartItems[cartElement.id].inCart += 1;
         } else {
         cartElement.inCart = 1
         cartItems = {
-            [cartElement.tag]: cartElement
+            [cartElement.id]: cartElement
             }
         }
 
@@ -228,7 +230,7 @@ $user_data = check_login($mysqlicon);
 
                 containerText.innerHTML += `
                 <div class="product">
-                    <span class="borrar"><i class="fa-solid fa-circle-xmark" id="${item.tag}"></i></span>
+                    <span class="borrar"><i class="fa-solid fa-circle-xmark" id="${item.id}"></i></span>
                     <img src="${item.image}" id=${item.id} />
                     <span> ${item.name} </span>
                 </div>
@@ -267,7 +269,7 @@ $user_data = check_login($mysqlicon);
             let btnId = btn.lastElementChild.id;
             console.log(btn.lastElementChild)
             console.log('u clicked me');
-            console.log(typeof btnId)
+            // console.log(typeof btnId)
             console.log(btnId);
             localStorage.removeItem({btnId});
             // deleteItem(btnId)
