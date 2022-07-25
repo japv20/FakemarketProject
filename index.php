@@ -1,6 +1,6 @@
 <?php
 
-// start session
+// st/art session
 session_start();
     $_SESSION;
 
