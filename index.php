@@ -1,6 +1,5 @@
 <?php
 
-echo "Hello";
 // start session
 session_start();
     $_SESSION;
