@@ -38,6 +38,7 @@ $user_data = check_login($mysqlicon);
 <html>
 <head>
     <title> Fakemark </title>
+    <!-- <link rel="icon" href="../Shopping-icon_30277.ico" type="image/ico"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
@@ -216,6 +217,19 @@ $user_data = check_login($mysqlicon);
 
     onLoadCartNumbers();
 
+    function removeItem(id) {
+        let itemsInCart = localStorage.getItem("productsInCart")
+        itemsInCart = JSON.parse(itemsInCart)
+        
+        for (let i=0; i < itemsInCart.length; i += 1) {
+            if (itemsInCart[i].id === id) {
+                itemsInCart.splice(i, 1)
+                return alert(`SuCCESSFUL`) 
+                // localStorage.setItem("productsInCart", itemsInCart);
+            } else { alert("failed")}
+        }
+    } 
+
     function displayCart() {
         let itemsInCart = localStorage.getItem("productsInCart")
         itemsInCart = JSON.parse(itemsInCart)
@@ -266,12 +280,17 @@ $user_data = check_login($mysqlicon);
     console.log(deleteBtns)
     deleteBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            let itemsInCart = localStorage.getItem("productsInCart")
-            itemsInCart = JSON.parse(itemsInCart)
-        
+            // let itemsInCart = localStorage.getItem("productsInCart")
+            // itemsInCart = JSON.parse(itemsInCart)
+            
             let btnId = btn.lastElementChild.id;
             console.log(`You clicked me to delete item ${btnId}`);
-            console.log(itemsInCart)
+            removeItem(btnId)
+            // console.log(itemsInCart.denimjacket)
+            // if(itemsInCart.denimjacket.id == btnId) {
+            //     console.log("Hello");
+            //     localStorage.removeItem(itemsInCart, "denimjacket");
+            // }
             // if(itemsInCart.denimjacket.id === btnId) {
             //     console.log("hello")
             //     // localStorage.removeItem(itemsInCart.denimjacket.tag)
