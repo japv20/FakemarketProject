@@ -1,13 +1,13 @@
 <?php
 
-// echo "Hello";
+echo "Hello";
 // start session
 session_start();
     $_SESSION;
 
 // $mysqli = new mysqli("hostname", "username", "password", "database");
-$mysqli = new mysqli("localhost", "root", "", "test");
-// $mysqli = new mysqli("eu-cdbr-west-03.cleardb.net", "b21d46832d533e", "8f35cee4", "heroku_b2764aba82c3a92");
+// $mysqli = new mysqli("localhost", "root", "", "test");
+$mysqli = new mysqli("eu-cdbr-west-03.cleardb.net", "b21d46832d533e", "8f35cee4", "heroku_b2764aba82c3a92");
  
 // Check connection
 if($mysqli === false){
@@ -185,17 +185,17 @@ $user_data = check_login($mysqlicon);
         cartItems = JSON.parse(cartItems);
 
         if(cartItems != null) {
-            if(cartItems[cartElement.id] == undefined) {
+            if(cartItems[cartElement.tag] == undefined) {
                 cartItems = {
                     ...cartItems,
-                    [cartElement.id]: cartElement
+                    [cartElement.tag]: cartElement
                 }
             }
-            cartItems[cartElement.id].inCart += 1;
+            cartItems[cartElement.tag].inCart += 1;
         } else {
         cartElement.inCart = 1
         cartItems = {
-            [cartElement.id]: cartElement
+            [cartElement.tag]: cartElement
             }
         }
 
@@ -266,14 +266,33 @@ $user_data = check_login($mysqlicon);
     console.log(deleteBtns)
     deleteBtns.forEach(btn => {
         btn.addEventListener('click', function() {
+            let itemsInCart = localStorage.getItem("productsInCart")
+            itemsInCart = JSON.parse(itemsInCart)
+        
             let btnId = btn.lastElementChild.id;
-            console.log(btn.lastElementChild)
-            console.log('u clicked me');
-            // console.log(typeof btnId)
-            console.log(btnId);
-            localStorage.removeItem({btnId});
-            // deleteItem(btnId)
-        })
+            console.log(`You clicked me to delete item ${btnId}`);
+            console.log(itemsInCart)
+            // if(itemsInCart.denimjacket.id === btnId) {
+            //     console.log("hello")
+            //     // localStorage.removeItem(itemsInCart.denimjacket.tag)
+            // }
+            // console.log(btnId);
+            // Object.values(itemsInCart).map(item => {
+                // console.log(item)
+                // console.log(item.id)
+                // if (item.id == btnId) {
+                    // console.log("Buenas")
+                //     localStorage.removeItem(item.tag)
+            //    }
+                // console.log(btnId)
+                // if(item.id == btnId) {
+                //     console.log("Matchin")
+                //     localStorage.removeItem(item.id)
+                // }
+            // })
+            
+            })
+            // localStorage.removeItem(name);
     })
 
     closeButton.addEventListener('click', function(eventClose) { //hide modal
