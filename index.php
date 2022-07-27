@@ -1,6 +1,7 @@
 <?php
+echo "Wepa";
 
-// st/art session
+// start session
 session_start();
     $_SESSION;
 
