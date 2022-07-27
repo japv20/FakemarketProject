@@ -14,7 +14,7 @@ if($mysqli === false){
     die("ERROR: Could not connect. " . $mysqli->connect_error);
 }
 // Print host information
-echo "Connection Successfully. Host info: " . $mysqli->host_info;
+// echo "Connection Successfully. Host info: " . $mysqli->host_info;
 
 $sql = "select * from products";
 $result = ($mysqli->query($sql));

@@ -9,4 +9,4 @@ if($mysqlicon === false){
     die("ERROR: Could not connect. " . $mysqlicon->connect_error);
 }
 // Print host information
-echo "Connection Successfully. Host info: " . $mysqlicon->host_info;
+// echo "Connection Successfully. Host info: " . $mysqlicon->host_info;
