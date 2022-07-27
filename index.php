@@ -1,5 +1,5 @@
 <?php
-echo "Wepa";
+// echo "Wepa";
 
 // start session
 session_start();
