@@ -3,8 +3,14 @@ echo "Wepa";
 
 // start session
 // session_start();
-    // $_SESSION;
+    $_SESSION;
+    
+// Login & Signup
+// https://www.youtube.com/watch?v=WYufSGgaCZ8
+include("connection.php");
+include("functions.php");
 
+$user_data = check_login($mysqlicon);
 // $mysqli = new mysqli("hostname", "username", "password", "database");
 // $mysqli = new mysqli("localhost", "root", "", "test");
 // $mysqli = new mysqli("eu-cdbr-west-03.cleardb.net", "b21d46832d533e", "8f35cee4", "heroku_b2764aba82c3a92");
@@ -16,18 +22,18 @@ echo "Wepa";
 // Print host information
 //echo "Connection Successfully. Host info: " . $mysqli->host_info;
 
-// $sql = "select * from products";
-// $result = ($mysqli->query($sql));
+$sql = "select * from products";
+$result = ($mysqli->query($sql));
 // declare array to store the data of database
-// $row = [];
+$row = [];
 
-// if ($result->num_rows > 0) {
+if ($result->num_rows > 0) {
     // fetch all data from db into array
-    // $row = $result->fetch_all(MYSQLI_ASSOC);
-// }
+    $row = $result->fetch_all(MYSQLI_ASSOC);
+}
 
-// Login & Signup
-// https://www.youtube.com/watch?v=WYufSGgaCZ8
+// // Login & Signup
+// // https://www.youtube.com/watch?v=WYufSGgaCZ8
 // include("connection.php");
 // include("functions.php");
 
