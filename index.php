@@ -1,6 +1,4 @@
 <?php
-// echo "Wepa";
-
 // start session
 session_start();
     $_SESSION;
@@ -133,6 +131,7 @@ $user_data = check_login($mysqlicon);
             console.log(e.target.previousElementSibling)
             // console.log(e.target.parentElement.img)
             if (e.target.className === "addCart") {
+                alert("Item added into your cart!")
             // console.log(e.target.previousElementSibling.firstElementChild.textContent);
             // console.log(e.target.previousElementSibling.lastElementChild.textContent);
             const name = e.target.previousElementSibling.firstElementChild.textContent;
@@ -217,19 +216,6 @@ $user_data = check_login($mysqlicon);
 
     onLoadCartNumbers();
 
-    function removeItem(id) {
-        let itemsInCart = localStorage.getItem("productsInCart")
-        itemsInCart = JSON.parse(itemsInCart)
-        
-        for (let i=0; i < itemsInCart.length; i += 1) {
-            if (itemsInCart[i].id === id) {
-                itemsInCart.splice(i, 1)
-                return alert(`SuCCESSFUL`) 
-                // localStorage.setItem("productsInCart", itemsInCart);
-            } else { alert("failed")}
-        }
-    } 
-
     function displayCart() {
         let itemsInCart = localStorage.getItem("productsInCart")
         itemsInCart = JSON.parse(itemsInCart)
@@ -244,7 +230,7 @@ $user_data = check_login($mysqlicon);
 
                 containerText.innerHTML += `
                 <div class="product">
-                    <span class="borrar"><i class="fa-solid fa-circle-xmark" id="${item.id}"></i></span>
+                    <span class="borrar"><i class="fa-solid fa-circle-xmark" id="${item.tag}"></i></span>
                     <img src="${item.image}" id=${item.id} />
                     <span> ${item.name} </span>
                 </div>
@@ -273,45 +259,41 @@ $user_data = check_login($mysqlicon);
     const cartIcon = document.querySelector('#icon-cart').addEventListener('click', (e) => {
     modal.style.display = "block"; //display modal
     displayCart();
-    // get delete icons    
+    // get delete icons
     let deleteButton = document.querySelectorAll('.borrar')
     console.log(deleteButton)
     let deleteBtns = [...deleteButton]
     console.log(deleteBtns)
     deleteBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            // let itemsInCart = localStorage.getItem("productsInCart")
-            // itemsInCart = JSON.parse(itemsInCart)
+            let itemsInCart = localStorage.getItem("productsInCart")
+            itemsInCart = JSON.parse(itemsInCart)
             
             let btnId = btn.lastElementChild.id;
             console.log(`You clicked me to delete item ${btnId}`);
-            removeItem(btnId)
-            // console.log(itemsInCart.denimjacket)
+            // removeItem(btnId)
             // if(itemsInCart.denimjacket.id == btnId) {
             //     console.log("Hello");
             //     localStorage.removeItem(itemsInCart, "denimjacket");
             // }
             // if(itemsInCart.denimjacket.id === btnId) {
             //     console.log("hello")
-            //     // localStorage.removeItem(itemsInCart.denimjacket.tag)
+                // localStorage.removeItem("productsInCart")
             // }
-            // console.log(btnId);
-            // Object.values(itemsInCart).map(item => {
-                // console.log(item)
-                // console.log(item.id)
+            Object.values(itemsInCart).map(item => {
+                console.log(item)
+                console.log(item.id)
                 // if (item.id == btnId) {
                     // console.log("Buenas")
-                //     localStorage.removeItem(item.tag)
+                    // localStorage.removeItem(item.id)
             //    }
                 // console.log(btnId)
                 // if(item.id == btnId) {
                 //     console.log("Matchin")
                 //     localStorage.removeItem(item.id)
                 // }
-            // })
-            
             })
-            // localStorage.removeItem(name);
+            })
     })
 
     closeButton.addEventListener('click', function(eventClose) { //hide modal
@@ -348,7 +330,7 @@ $user_data = check_login($mysqlicon);
                 return actions.order.capture().then(function(orderData) {
                     console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
                     var transaction = orderData.purchase_units[0].payments.captures[0];
-                    alert('Transaction '+ transaction.status + ': ' + transaction.id);
+                    alert('Transaction '+ transaction.status + ': Reference number' + transaction.id);
                     localStorage.clear();
                 })
             }
@@ -358,10 +340,9 @@ $user_data = check_login($mysqlicon);
     //FILTER CATEGORIES
 const womenBtn = document.querySelector('#cat-women');
 const products = document.querySelector('.product-display').children; // console.log(products);
-const allProducts = [...products];
+const allProducts = [...products]; // console.log(allProducts);
 const picHolder = document.querySelector('#back-img');
 const subtitle = document.querySelector('#subtitle');
-// console.log(allProducts);
 
 womenBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -438,10 +419,10 @@ const babyBtn = document.querySelector('#cat-baby').addEventListener('click', (e
         else if (allProducts[i].className === 'kids'){
             allProducts[i].style.display = 'none';
         }
-    if(allProducts[i].className === 'baby'){
+        if(allProducts[i].className === 'baby'){
         allProducts[i].style.display = 'block';
+        }
     }
-}
 })
 </script>
 </html>
