@@ -10,8 +10,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* margin: 10px; */
-    
 }
 
 header a {
@@ -29,7 +27,6 @@ nav {
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
-    /* background-color: lavender; */
     padding: 5px 5px;
     margin: 10px;
 }
@@ -51,12 +48,6 @@ a:hover {
 
 #back-img {
     background-image: url("https://images.pexels.com/photos/3321584/pexels-photo-3321584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    /*
-    https://images.pexels.com/photos/3772506/pexels-photo-3772506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-    https://images.pexels.com/photos/794062/pexels-photo-794062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-     https://images.pexels.com/photos/794062/pexels-photo-794062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-    https://images.pexels.com/photos/2976575/pexels-photo-2976575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-    */
     height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,7 +62,7 @@ a:hover {
     /* font-family: 'Bebas Neue', cursive; */
     /* font-family: 'Montserrat Alternates', sans-serif;  */
     font-family: 'Dosis', sans-serif;
-  }
+}
 
 .product-display {
     display: flex;
@@ -120,13 +111,6 @@ p {
     background-color: #C5C3C4;
     /* #F2E8DF; */
 }
-
-/* .img-display {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-} */
 
 .modal {
     display: none;
@@ -205,14 +189,12 @@ a {
 
 .price {
     width: 15%;
-    /* border-bottom: 1px solid lightcoral; */
     display: flex;
     align-items: center;
 }
 
 .quantity {
     width: 10%;
-    /* border-bottom: 1px solid lightcoral; */
     display: flex;
     align-items: center;
 }
@@ -222,8 +204,6 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* padding: 10px 0; */
-    /* border-bottom: 1px solid lightcoral; */
 }
 
 .product {
@@ -250,7 +230,6 @@ a {
     display: flex;
     justify-content: flex-start;
     width: 80%;
-    /* padding: 10px 0; */
 }
 
 .basketTotalTitle {
@@ -261,4 +240,10 @@ a {
 .basketTotal {
     width: 10%;
     border-bottom: 1px solid lightcoral;
+}
+
+@media screen and (max-width: 480px) {
+    .topLeft {
+        display: none;
+    }    
 }

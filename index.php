@@ -46,8 +46,8 @@ $user_data = check_login($mysqlicon);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <style> <?php include 'css/styles.css'; ?> </style>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <script src="https://kit.fontawesome.com/c36a3b1500.js" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="scrippt.js"> </script> -->
 </head>
 
 <body>
@@ -56,10 +56,6 @@ $user_data = check_login($mysqlicon);
     <div class="icons">
     <a href="login.php"><i id="user-btn" class="fa-solid fa-user"></i> </a>
     <a href="logout.php" <?php if ($user_data == null){ echo 'style="display:none;"'; } ?>> Log out </a>
-    <!-- <p> <i> Logo </i>  -->
-    <!-- <button id="sign-up"> Sign Up </button>
-    <button id="login"> LOGIN </button>    <br/> -->
-    <!-- <a href="shopping-cart.php"> -->
     <i class="fa-solid fa-cart-shopping" id="icon-cart"> </i><span class="cart-span">0</span>
 </div>
     </header> 
@@ -71,6 +67,7 @@ $user_data = check_login($mysqlicon);
         <a id="cat-baby" href=""> BABY </a>
     </nav>
     <section id="back-img">
+        <!-- <img src="bck-pic.png"/> -->
         <div class="topLeft"> 
         What better place to buy than in Fakemarket?
         </div>
