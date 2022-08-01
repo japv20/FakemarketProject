@@ -35,7 +35,7 @@ $user_data = check_login($mysqlicon);
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Fakemark </title>
+    <title> Fakemarket </title>
     <link rel="icon"  href="favicon.ico"/>
     <!-- <link rel="icon" href="../favicon.ico" type="image/ico"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
