@@ -1,5 +1,6 @@
 {
     "require": {
-        "omnipay/paypal": "^3.0"
+        "omnipay/paypal": "^3.0",
+        "mongodb/mongodb": "^1.15"
     }
 }

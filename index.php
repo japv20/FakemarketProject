@@ -1,19 +1,23 @@
 <?php
+
+//mongodb
+//echo extension_loaded("mongodb") ? "loaded\n" : "not loaded\n";
+
 // start session
 session_start();
     $_SESSION;
     
 // $mysqli = new mysqli("hostname", "username", "password", "database");
 $mysqli = new mysqli("localhost", "root", "", "test");
-// $mysqli = new mysqli("mongodb+srv", "japv20", "NYRKYclriLxwKiRc", "cluster0.kurlh4t.mongodb.net/test");
-// $mysqli = new mysqli("eu-cdbr-west-03.cleardb.net", "b21d46832d533e", "8f35cee4", "heroku_b2764aba82c3a92");
- 
+// $mysqli = new mysqli("mongodb+srv", "japv20", "NYRKYclriLxwKiRc", "cluster0.kurlh4t.mongodb.net/test"); // mongodb
+// $mysqli = new mysqli("eu-cdbr-west-03.cleardb.net", "b21d46832d533e", "8f35cee4", "heroku_b2764aba82c3a92"); // heroku
+
 // Check connection
 if($mysqli === false){
     die("ERROR: Could not connect. " . $mysqli->connect_error);
 }
 // Print host information
-// echo "Connection Successfully. Host info: " . $mysqli->host_info;
+echo "Connection Successfully. Host info: " . $mysqli->host_info;
 
 $sql = "select * from products";
 $result = ($mysqli->query($sql));
